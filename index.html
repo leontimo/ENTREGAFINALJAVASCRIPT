@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra y Venta de FIFA Coins</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Incluir SweetAlert2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.7.10/sweetalert2.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.7.10/sweetalert2.min.js"></script>
+</head>
+<body>
+    <h1>Helmut coin Compra y Venta de FIFA Coins</h1>
+
+    <!-- Tabla de cotización -->
+    <table id="cotizacion" style="width: 100%; margin-bottom: 20px; border-collapse: collapse; text-align: center;">
+        <thead>
+            <tr>
+                <th>Fecha y Hora</th>
+                <th>Precio de Compra</th>
+                <th>Precio de Venta</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="fechaHora"></td>
+                <td id="precioCompra"></td>
+                <td id="precioVenta"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <label for="saldoInicial">Saldo Inicial:</label>
+    <input type="number" id="saldoInicial" placeholder="Ingrese saldo inicial">
+
+    <label for="tarjeta">Selecciona tu tarjeta:</label>
+    <select id="tarjeta">
+        <option value="visa">Visa</option>
+        <option value="mastercard">Mastercard</option>
+    </select>
+
+    <label for="ultimos4">Últimos 4 dígitos de la tarjeta:</label>
+    <input type="text" id="ultimos4" placeholder="1234" maxlength="4">
+
+    <button id="iniciarSimulacionBtn">Iniciar Simulación</button>
+
+    <div id="operaciones" style="display:none;">
+        <div>
+            <label for="cantidad">Cantidad de FIFA Coins:</label>
+            <input type="number" id="cantidad" placeholder="Cantidad">
+        </div>
+        <div>
+            <button id="comprarBtn">Comprar</button>
+            <button id="venderBtn">Vender</button>
+        </div>
+        <div>
+            <button id="mostrarTransaccionesBtn">Mostrar Transacciones</button>
+        </div>
+    </div>
+
+    <div id="resultados"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
